@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookCatalogueParte3</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <% flash.each do |name, msg| -%>
+      <br>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+  </body>
+</html>
