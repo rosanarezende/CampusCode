@@ -22,7 +22,7 @@ class Conta
     if(saldo >= valor)
       self.saldo -= valor
     else
-      puts "Não foi possível executar a transação. Saldo insuficiente"
+      raise "Saldo insuficiente"
     end
   end
 
